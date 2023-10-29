@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import MetalKit
 
-class ViewController: UIViewController   {
+class ViewControllerA: UIViewController   {
 
     //MARK: Class Properties
     var filters : [CIFilter]! = nil
@@ -56,6 +56,10 @@ class ViewController: UIViewController   {
             videoManager.start()
         }
     
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        videoManager.stop()
     }
     
     //MARK: Process image output

@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		08A99F1D2AEEBF8200B33751 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A99F1C2AEEBF8200B33751 /* MainViewController.swift */; };
+		08A99F1F2AEECAE500B33751 /* ViewControllerB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A99F1E2AEECAE500B33751 /* ViewControllerB.swift */; };
 		B650B31B1D8340F0000114A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650B31A1D8340F0000114A1 /* AppDelegate.swift */; };
-		B650B31D1D8340F0000114A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650B31C1D8340F0000114A1 /* ViewController.swift */; };
+		B650B31D1D8340F0000114A1 /* ViewControllerA.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650B31C1D8340F0000114A1 /* ViewControllerA.swift */; };
 		B650B3201D8340F0000114A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B650B31E1D8340F0000114A1 /* Main.storyboard */; };
 		B650B3221D8340F0000114A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B650B3211D8340F0000114A1 /* Assets.xcassets */; };
 		B650B3251D8340F0000114A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B650B3231D8340F0000114A1 /* LaunchScreen.storyboard */; };
@@ -22,10 +23,11 @@
 
 /* Begin PBXFileReference section */
 		08A99F1C2AEEBF8200B33751 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		08A99F1E2AEECAE500B33751 /* ViewControllerB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerB.swift; sourceTree = "<group>"; };
 		530B74D02AEE0B350043F82F /* ImageLab4-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImageLab4-Bridging-Header.h"; sourceTree = "<group>"; };
 		B650B3171D8340F0000114A1 /* ImageLab4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageLab4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B650B31A1D8340F0000114A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B650B31C1D8340F0000114A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B650B31C1D8340F0000114A1 /* ViewControllerA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerA.swift; sourceTree = "<group>"; };
 		B650B31F1D8340F0000114A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B650B3211D8340F0000114A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B650B3241D8340F0000114A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -73,7 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				B650B31A1D8340F0000114A1 /* AppDelegate.swift */,
-				B650B31C1D8340F0000114A1 /* ViewController.swift */,
+				B650B31C1D8340F0000114A1 /* ViewControllerA.swift */,
+				08A99F1E2AEECAE500B33751 /* ViewControllerB.swift */,
 				08A99F1C2AEEBF8200B33751 /* MainViewController.swift */,
 				B650B31E1D8340F0000114A1 /* Main.storyboard */,
 				B650B3211D8340F0000114A1 /* Assets.xcassets */,
@@ -174,9 +177,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B650B31D1D8340F0000114A1 /* ViewController.swift in Sources */,
+				B650B31D1D8340F0000114A1 /* ViewControllerA.swift in Sources */,
 				B650B31B1D8340F0000114A1 /* AppDelegate.swift in Sources */,
 				B67B72BB1D996ADE008EDDE1 /* OpenCVBridge.mm in Sources */,
+				08A99F1F2AEECAE500B33751 /* ViewControllerB.swift in Sources */,
 				B6885D9A2ADD73A100C11AFF /* VisionAnalgesic.swift in Sources */,
 				08A99F1D2AEEBF8200B33751 /* MainViewController.swift in Sources */,
 			);

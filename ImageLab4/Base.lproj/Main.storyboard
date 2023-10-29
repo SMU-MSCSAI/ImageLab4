@@ -37,6 +37,9 @@
                                     <color key="baseForegroundColor" systemColor="linkColor"/>
                                     <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="q84-me-6Gi"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1B6-mR-XgC">
                                 <rect key="frame" x="85" y="281" width="205" height="59"/>
@@ -50,6 +53,9 @@
                                     <color key="baseForegroundColor" systemColor="linkColor"/>
                                     <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="bfU-ng-sci" kind="show" id="lEv-Fl-YUW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -81,48 +87,48 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qTU-QZ-EQg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1188.1773399014778" y="-168.80000000000001"/>
+            <point key="canvasLocation" x="-2438" y="-614"/>
         </scene>
-        <!--View Controller-->
+        <!--View ControllerA-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageLab4" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewControllerA" customModule="ImageLab4" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="802"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="AZh-I9-zyC">
-                                <rect key="frame" x="14" y="762" width="347" height="31"/>
+                                <rect key="frame" x="14" y="752" width="347" height="31"/>
                                 <connections>
                                     <action selector="setFlashLevel:" destination="BYZ-38-t0r" eventType="valueChanged" id="lU7-s8-q3p"/>
                                 </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HqB-mz-Xht">
-                                <rect key="frame" x="255" y="724" width="104" height="30"/>
+                                <rect key="frame" x="255" y="714" width="104" height="30"/>
                                 <state key="normal" title="Toggle Camera"/>
                                 <connections>
                                     <action selector="switchCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8o5-A8-Yvy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsl-XI-9ND">
-                                <rect key="frame" x="16" y="724" width="87" height="30"/>
+                                <rect key="frame" x="16" y="714" width="87" height="30"/>
                                 <state key="normal" title="Toggle Flash"/>
                                 <connections>
                                     <action selector="flash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p39-Fo-nAF"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stage: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17Z-Pc-DCH">
-                                <rect key="frame" x="155.66666666666666" y="695" width="64" height="21"/>
+                                <rect key="frame" x="155.66666666666666" y="685" width="64" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <mtkView contentMode="scaleToFill" colorPixelFormat="BGRA8Unorm" depthStencilPixelFormat="Depth32Float" translatesAutoresizingMaskIntoConstraints="NO" id="Xqm-zI-mYg">
-                                <rect key="frame" x="0.0" y="50" width="375" height="625"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="665"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="bhc-zi-pqW" appends="YES" id="Ntg-q1-A2g"/>
@@ -136,10 +142,10 @@
                             <constraint firstAttribute="bottom" secondItem="AZh-I9-zyC" secondAttribute="bottom" constant="20" symbolic="YES" id="60r-75-K1I"/>
                             <constraint firstItem="fsl-XI-9ND" firstAttribute="leading" secondItem="AZh-I9-zyC" secondAttribute="leading" id="8Qr-hq-s8c"/>
                             <constraint firstItem="fsl-XI-9ND" firstAttribute="baseline" secondItem="HqB-mz-Xht" secondAttribute="baseline" id="9LW-dS-HXP"/>
-                            <constraint firstItem="Xqm-zI-mYg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Evu-PC-5UW"/>
                             <constraint firstItem="AZh-I9-zyC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="JNk-l6-pcn"/>
                             <constraint firstItem="17Z-Pc-DCH" firstAttribute="centerX" secondItem="AZh-I9-zyC" secondAttribute="centerX" id="L2W-SG-Ph3"/>
                             <constraint firstItem="HqB-mz-Xht" firstAttribute="trailing" secondItem="AZh-I9-zyC" secondAttribute="trailing" id="NMX-0P-Ett"/>
+                            <constraint firstItem="Xqm-zI-mYg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="NT7-Ie-TTt"/>
                             <constraint firstAttribute="trailing" secondItem="Xqm-zI-mYg" secondAttribute="trailing" id="Y7z-Yu-sSb"/>
                             <constraint firstItem="AZh-I9-zyC" firstAttribute="top" secondItem="HqB-mz-Xht" secondAttribute="bottom" constant="8" symbolic="YES" id="csO-hb-YdJ"/>
                             <constraint firstItem="HqB-mz-Xht" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="dG4-O1-6UF"/>
@@ -150,6 +156,7 @@
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fsl-XI-9ND" secondAttribute="trailing" constant="20" symbolic="YES" id="tu9-Sb-MW5"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="CnO-Gf-0XZ"/>
                     <connections>
                         <outlet property="cameraView" destination="Xqm-zI-mYg" id="SUk-4i-PQC"/>
                         <outlet property="flashSlider" destination="AZh-I9-zyC" id="cd6-Eh-9cl"/>
@@ -170,7 +177,41 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-303" y="-193"/>
+            <point key="canvasLocation" x="-1306" y="-1041"/>
+        </scene>
+        <!--View ControllerB-->
+        <scene sceneID="8hi-xL-eZY">
+            <objects>
+                <viewController id="bfU-ng-sci" customClass="ViewControllerB" customModule="ImageLab4" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ytx-K5-dAO"/>
+                        <viewControllerLayoutGuide type="bottom" id="wK5-6V-wDH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qLw-ww-xn2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="802"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mtkView contentMode="scaleToFill" ambiguous="YES" colorPixelFormat="BGRA8Unorm" depthStencilPixelFormat="Depth32Float" translatesAutoresizingMaskIntoConstraints="NO" id="Tim-jm-AOj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="665"/>
+                                <gestureRecognizers/>
+                            </mtkView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Tim-jm-AOj" firstAttribute="leading" secondItem="qLw-ww-xn2" secondAttribute="leading" id="HJS-gy-gFW"/>
+                            <constraint firstItem="Tim-jm-AOj" firstAttribute="top" secondItem="Ytx-K5-dAO" secondAttribute="bottom" id="Yun-mk-R09"/>
+                            <constraint firstAttribute="trailing" secondItem="Tim-jm-AOj" secondAttribute="trailing" id="tz9-9J-5Kf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="SHZ-NV-VeL"/>
+                    <connections>
+                        <outlet property="cameraView" destination="Tim-jm-AOj" id="PRo-fH-UC8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fWY-ee-aCp" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1305" y="-257"/>
         </scene>
     </scenes>
     <resources>

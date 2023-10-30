@@ -43,7 +43,7 @@ class VisionAnalgesic:NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, MT
         }
     }
     
-    var ciOrientation = 5 // default for portrait 
+    var ciOrientation = 5 // default for portrait
     
     private var scaling:CGPoint = CGPoint(x:1.0,y:1.0)
     func getViewScaling()->CGPoint{
@@ -83,7 +83,7 @@ class VisionAnalgesic:NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, MT
     /// VisionAnagesic class requires that a MetalView (import MetalKit) is used and passed into the initializer. Class will keep a weak reference to this view. All rendered video will go to this view.
     init(view:MTKView){
         // When running for the first time, just set this to front
-        devicePosition = AVCaptureDevice.Position.back
+        devicePosition = AVCaptureDevice.Position.front
         
         super.init()
         
@@ -129,7 +129,7 @@ class VisionAnalgesic:NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, MT
         self.stop()
     }
     
-    /// Stop the video session and restart with given position and presets. 
+    /// Stop the video session and restart with given position and presets.
     func reset(){
         if(self.isRunning){
             self.stop()
@@ -197,7 +197,6 @@ class VisionAnalgesic:NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, MT
             self.session?.addOutput(output)
             output.connections.first?.videoOrientation = .portrait
             self.session?.startRunning()
-            
         }
     }
  
@@ -244,10 +243,6 @@ class VisionAnalgesic:NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, MT
     }
     
     internal func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        
-        if let session = self.session{
-            if !session.isRunning{ return }
-        }
         // Grab the pixelbuffer frame from the camera output
         guard let pixelBuffer = sampleBuffer.imageBuffer else { return }
         processVideoFrame(pixelBuffer)
@@ -403,7 +398,7 @@ extension VisionAnalgesic {
         case AVCaptureDevice.Position.front:
             self.devicePosition = AVCaptureDevice.Position.back
         default:
-            self.devicePosition = AVCaptureDevice.Position.back
+            self.devicePosition = AVCaptureDevice.Position.front
         }
         
         self.reset()

@@ -12,13 +12,19 @@ import MetalKit
 class ViewControllerA: UIViewController   {
     
     var videoModel:VideoModel? = nil
+    var videoManager: VisionAnalgesic! = nil
+    
     
     @IBOutlet weak var cameraView: MTKView!
     //MARK: ViewController Hierarchy
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        videoModel = VideoModel(view: self.cameraView)
+        videoManager = VisionAnalgesic(view: self.cameraView)
+//        videoModel = VideoModel(view: self.cameraView)
+        videoManager.setCameraPosition(position: .front)
+        if !videoManager.isRunning {
+            videoManager.start()
+        }
         
     }
 }
